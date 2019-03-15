@@ -1,0 +1,24 @@
+<div class="section">
+    <div class="buttons">
+        <button *ngIf="expand" class="button" (click)="expand = !expand"> -</button>
+        <button *ngIf="!expand" class="button" (click)="expand = !expand"> +</button>
+        <span>{{ skilsOpened }}</span>
+    </div>
+    <div class="container" *ngIf="expand">
+        <div style="margin-left: 4rem">
+            {{ li }}
+            <div style="margin-left: 2rem">
+                html
+                <br>css
+                <br>javascript
+                <br>angular
+                <br>ionic
+            </div>
+            {{ liClosed }}
+        </div>
+    </div>
+
+    <span *ngIf="expand">
+            {{ contactClosed }}
+    </span>
+</div>

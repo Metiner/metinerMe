@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="metiner">
+    <div class="buttons">
+      <div>
+        <button *ngIf="expand" class="button" (click)="expand = !expand"> - </button>
+        <button *ngIf="!expand" class="button" (click)="expand = !expand"> + </button>
+      </div>
+      <div>
+        <span>{{ metinerOpened }}</span>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="expand">
+    <app-about></app-about>
+    <app-skils></app-skils>
+    <app-projects></app-projects>
+    <app-contact></app-contact>
+  </div>
+  <div *ngIf="expand">
+    {{ metinerClosed }}
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="section">
+    <div class="buttons">
+        <button *ngIf="expand" class="button" (click)="expand = !expand"> -</button>
+        <button *ngIf="!expand" class="button" (click)="expand = !expand"> +</button>
+        <span>{{ projectsOpened }}</span>
+    </div>
+    <div class="container" *ngIf="expand">
+        <div style="margin-left: 4rem">
+            {{ a }}=<a href="http://benimfirsatim.com" target="_blank"> benimfirsatim.com</a>
+            {{ aClosed }}
+        </div>
+    </div>
+
+    <span *ngIf="expand">
+            {{ projectsClosed }}
+    </span>
+</div>

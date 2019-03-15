@@ -1,0 +1,18 @@
+<div class="section">
+    <div class="buttons">
+        <button *ngIf="expand" class="button" (click)="expand = !expand"> -</button>
+        <button *ngIf="!expand" class="button" (click)="expand = !expand"> +</button>
+        <span>{{ aboutOpened }}</span>
+    </div>
+    <div *ngIf="expand" class="text">
+        {{ pOpened }}<br>
+        <div class="inner-text">
+            front-end developer, designer, builds products and tools that solve real user problems. likes diving into
+            new technologies, flipping them upside-down and inside-out to figure out how and why they work.
+        </div>
+        {{ pClosed }}
+        <br>
+    </div>
+    <span *ngIf="expand">
+            {{ aboutClosed }}</span>
+</div>

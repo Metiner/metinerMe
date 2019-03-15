@@ -1,0 +1,28 @@
+<div class="section">
+    <div class="buttons">
+        <button *ngIf="expand" class="button" (click)="expand = !expand"> -</button>
+        <button *ngIf="!expand" class="button" (click)="expand = !expand"> +</button>
+        <span>{{ contactOpened }}</span>
+    </div>
+    <div class="container" *ngIf="expand">
+        <div class="text">
+            {{ address }} metinerkck@gmail.com
+            {{ addressClosed }}
+        </div>
+        <div class="text">
+            {{ phone }} +90 (532) 793 20 84
+            {{ phoneClosed }}
+        </div>
+        <div class="text">
+            {{ a }}=<a href="https://www.linkedin.com/in/metinerkocak/" target="_blank"> linkedin.com/in/metinerkocak</a>
+            {{ aClosed }}
+        </div>
+        <div class="text">
+            {{ a }}=<a href="https://gitlab.com/metinerk" target="_blank"> gitlab.com/metinerk</a>
+            {{ aClosed }}
+        </div>
+
+    </div>
+    <span *ngIf="expand">
+            {{ contactClosed }}</span>
+</div>
